@@ -1,0 +1,17 @@
+import 'dart:io';
+
+void main(){
+  print('ENTER ANY NUMBER: ');
+  String? inNum= stdin.readLineSync();
+
+  if(inNum !=null){
+    var number = int.parse(inNum);
+
+    if(number %2 == 0 ){
+      print(" $number is Even");
+    }
+    else{
+      print("$number is Odd number");
+    }
+  }
+}
