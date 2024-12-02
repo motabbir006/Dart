@@ -1,0 +1,9 @@
+void main(){
+  var lists=[ 1, 2, 3, 5, 8, 13, 21, 34, 55, 89];
+
+  for(var i=0; i<lists.length; i++){
+if(lists[i]<15){
+  print(lists[i]);
+}
+  }
+}
