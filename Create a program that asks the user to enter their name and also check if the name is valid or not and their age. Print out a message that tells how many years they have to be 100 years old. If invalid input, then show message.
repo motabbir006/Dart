@@ -1,0 +1,30 @@
+import 'dart:io';
+
+void main() {
+  print("Enter Your first name: ");
+  String? firstName = stdin.readLineSync();
+  print("Enter Your last name: ");
+  String? lastName = stdin.readLineSync();
+
+  if (firstName != null && lastName != null) {
+    if (firstName.length < 5 || lastName.length < 5) {
+      print('Invalid name. Please provide correct name.');
+      return;
+    }
+
+    print("Hi, $firstName $lastName ! What is your age?");
+    String? ageIn = stdin.readLineSync();
+
+    if (ageIn != null) {
+      var age = int.parse(ageIn);
+
+      var sub = 100 - age;
+      print("$firstName $lastName, You have $sub years to be 100");
+    } else {
+      print(' Age Input field is empty');
+    }
+    ;
+  } else {
+    print('Name field is Empty');
+  }
+}
